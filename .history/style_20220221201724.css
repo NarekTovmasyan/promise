@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body {
+    background-color: blue;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner {
+    background-image: url("./Caesar-Materica-Ocra-Grip-225x453-cm-AFU6-Casa39.jpg");
+    position: relative;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background-image: url("./Caesar-Materica-Ocra-Grip-225x453-cm-AFU6-Casa39.jpg");
+    position: relative;
+    width: 90%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 13px 12px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

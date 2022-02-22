@@ -1,0 +1,106 @@
+// const myBirthday = (isSick) => {
+//     return new Promise(function (resolve, reject) {
+//       if (!isSick) {
+//         setTimeout(() => resolve(2), 2000);
+//       } else {
+//         reject("I dont have cake :разочарование_облегчение:");
+//       }
+//     });
+//   };
+//   const handleCake = async () => {
+//     try {
+//       let result = await myBirthday(true); // result = 2
+//       console.log(`I have ${result} cakes :день_рождения:`);
+//     } catch (err) {
+//       console.log(err);
+//     } finally {
+//       console.log("Party");
+//     }
+//   };
+//   handleCake();
+
+
+
+// myBirthday(true)
+//   .then((result) => console.log(`I have ${result} cakes :день_рождения:`))
+//   .catch((err) => console.log(err))
+//   .finally(() => console.log("Party"));
+
+
+// let number = 5;
+
+// function compare(argument) {
+//     return new Promise(function(resolve, reject) {
+//         if (number > argument) {
+//             resolve(number)
+//         } else {
+//             reject(new Error("oops"))
+//         }
+//     })
+// };
+// compare(6).then(function(number) {
+//     console.log(number);
+// }).catch(function(error) {
+//     console.log(error);
+// }).finally(() => {
+//     console.log("barlus");
+// })
+
+const value = document.getElementById("value");
+const button = document.getElementById("button");
+const p1Text = document.querySelector(".p1");
+let p2Text = document.querySelector(".p2");
+const sum = document.querySelector(".sum");
+let showText = document.getElementById("show-text");
+
+function randomNum(max) {
+    return Math.floor(Math.random() * max) + 1;
+}
+
+let inputValue = "";
+let x = value.value;
+
+function promise(x) {
+    return new Promise(function(resolve, reject) {
+        if (Number(value.value) >= 1 || Number(value.value) <= 6) {
+            resolve(inputValue = Number(value.value));
+        } else {
+            alert("enter chisht number, 1-6")
+            showText.innerText = ""
+            reject(new Error("sxal"))
+        }
+        let count = 0;
+        if (inputValue === random) {
+            count += 2;
+        } else if (Math.abs(inputValue - random) === 1) {
+            count += 1;
+        } else {
+            count += 0;
+        }
+    })
+};
+
+
+button.addEventListener("click", function() {
+    let random = randomNum(6);
+    p1Text.innerText = "random number: " + random;
+    promise(value.value).then(function() {
+        console.log("test", value.value);
+    })
+    p2Text.innerText = "count number: " + count;
+
+    // let arr = [];
+    // let sum1 = arr.reduce((a, b) => {
+    //     return a + b;
+    // }, "");
+    // sum.innerText = sum1;
+
+    // let usersByLikes = myUsers.reduce(function(arg, el) {
+    //     console.log("arg", arg);
+    //     console.log("el", el);
+    //     arg.push({
+    //         [el.name]: el.likes,
+    //     });
+    //     return arg;
+    // }, []);
+})
